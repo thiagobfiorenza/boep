@@ -1,0 +1,22 @@
+<h1>Listing units</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Abbr</th>
+  </tr>
+
+<% for units in @units %>
+  <tr>
+    <td><%=h units.name %></td>
+    <td><%=h units.abbr %></td>
+    <td><%= link_to 'Show', units %></td>
+    <td><%= link_to 'Edit', edit_units_path(units) %></td>
+    <td><%= link_to 'Destroy', units, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New units', new_units_path %>

@@ -1,0 +1,25 @@
+  [4;36;1mSQL (0.000560)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000342)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.005019)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.002952)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000802)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000303)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUnits (20081210180759)
+  [4;36;1mSQL (0.004230)[0m   [0;1mCREATE TABLE "units" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "abbr" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.001927)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081210180759')[0m
+  [4;36;1mSQL (0.000637)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000366)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000547)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000133)[0m   [0mPRAGMA index_list("units")[0m
