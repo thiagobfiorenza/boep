@@ -716,3 +716,73 @@ ZC4GOgpAdXNlZHsGOwdU--91e16352b18cec48320b16ff330728651f57b951
 Rendering template within layouts/products
 Rendering products/index
 Completed in 0.27779 (3 reqs/sec) | Rendering: 0.24943 (89%) | DB: 0.00130 (0%) | 200 OK [http://127.0.0.1/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2008-12-11 22:53:39) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZWZlMWRmNDM3OTIyNGQyZTIxOThiYjNmOWQ3Mjgz
+NzAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e2a7fe7053baeb14834dee880cda3f60d3ad6f40
+  Parameters: {"action"=>"new", "controller"=>"products"}
+Rendering template within layouts/products
+Rendering products/new
+Completed in 0.03453 (28 reqs/sec) | Rendering: 0.01070 (30%) | DB: 0.00000 (0%) | 200 OK [http://127.0.0.1/products/new]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2008-12-11 22:54:18) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZWZlMWRmNDM3OTIyNGQyZTIxOThiYjNmOWQ3Mjgz
+NzAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e2a7fe7053baeb14834dee880cda3f60d3ad6f40
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"982815cb1de9b8a1509f4d4ea7220cbf2e6b6307", "action"=>"create", "product"=>{"name"=>"", "unit_id"=>"", "category_id"=>"", "description"=>""}, "controller"=>"products"}
+Rendering template within layouts/products
+Rendering products/new
+Completed in 0.05256 (19 reqs/sec) | Rendering: 0.01287 (24%) | DB: 0.00000 (0%) | 200 OK [http://127.0.0.1/products]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2008-12-11 22:54:44) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZWZlMWRmNDM3OTIyNGQyZTIxOThiYjNmOWQ3Mjgz
+NzAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e2a7fe7053baeb14834dee880cda3f60d3ad6f40
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"982815cb1de9b8a1509f4d4ea7220cbf2e6b6307", "action"=>"create", "product"=>{"name"=>"", "unit_id"=>"", "category_id"=>"", "description"=>""}, "controller"=>"products"}
+Rendering template within layouts/products
+Rendering products/new
+Completed in 0.05915 (16 reqs/sec) | Rendering: 0.01235 (20%) | DB: 0.00000 (0%) | 200 OK [http://127.0.0.1/products]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2008-12-11 22:55:40) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZWZlMWRmNDM3OTIyNGQyZTIxOThiYjNmOWQ3Mjgz
+NzAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e2a7fe7053baeb14834dee880cda3f60d3ad6f40
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"982815cb1de9b8a1509f4d4ea7220cbf2e6b6307", "action"=>"create", "product"=>{"name"=>"", "unit_id"=>"", "category_id"=>"", "description"=>""}, "controller"=>"products"}
+Rendering template within layouts/products
+Rendering products/new
+Completed in 0.07003 (14 reqs/sec) | Rendering: 0.02062 (29%) | DB: 0.00000 (0%) | 200 OK [http://127.0.0.1/products]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2008-12-11 22:55:52) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZWZlMWRmNDM3OTIyNGQyZTIxOThiYjNmOWQ3Mjgz
+NzAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e2a7fe7053baeb14834dee880cda3f60d3ad6f40
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"982815cb1de9b8a1509f4d4ea7220cbf2e6b6307", "action"=>"create", "product"=>{"name"=>"", "unit_id"=>"a", "category_id"=>"", "description"=>""}, "controller"=>"products"}
+Rendering template within layouts/products
+Rendering products/new
+Completed in 0.05434 (18 reqs/sec) | Rendering: 0.01290 (23%) | DB: 0.00000 (0%) | 200 OK [http://127.0.0.1/products]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2008-12-11 22:55:59) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZWZlMWRmNDM3OTIyNGQyZTIxOThiYjNmOWQ3Mjgz
+NzAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e2a7fe7053baeb14834dee880cda3f60d3ad6f40
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"982815cb1de9b8a1509f4d4ea7220cbf2e6b6307", "action"=>"create", "product"=>{"name"=>"", "unit_id"=>"1.2", "category_id"=>"", "description"=>""}, "controller"=>"products"}
+Rendering template within layouts/products
+Rendering products/new
+Completed in 0.05461 (18 reqs/sec) | Rendering: 0.01833 (33%) | DB: 0.00000 (0%) | 200 OK [http://127.0.0.1/products]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2008-12-11 22:56:07) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZWZlMWRmNDM3OTIyNGQyZTIxOThiYjNmOWQ3Mjgz
+NzAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e2a7fe7053baeb14834dee880cda3f60d3ad6f40
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"982815cb1de9b8a1509f4d4ea7220cbf2e6b6307", "action"=>"create", "product"=>{"name"=>"", "unit_id"=>"2", "category_id"=>"", "description"=>""}, "controller"=>"products"}
+Rendering template within layouts/products
+Rendering products/new
+Completed in 0.06406 (15 reqs/sec) | Rendering: 0.01450 (22%) | DB: 0.00000 (0%) | 200 OK [http://127.0.0.1/products]
