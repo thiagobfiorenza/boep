@@ -23,3 +23,696 @@ Migrating to CreateUnits (20081210180759)
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
   [4;35;1mSQL (0.000133)[0m   [0mPRAGMA index_list("units")[0m
+
+
+Processing UnitsController#index (for 127.0.0.1 at 2008-12-11 22:43:36) [GET]
+  Session ID: 3824a551ea8996e616a8049d8e665467
+  Parameters: {"action"=>"index", "controller"=>"units"}
+  [4;36;1mUnit Load (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: units: SELECT * FROM "units" [0m
+
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: units: SELECT * FROM "units"     ):
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.1.2/lib/active_record/connection_adapters/abstract_adapter.rb:147:in `log'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.1.2/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.1.2/lib/active_record/connection_adapters/sqlite_adapter.rb:372:in `catch_schema_changes'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.1.2/lib/active_record/connection_adapters/sqlite_adapter.rb:132:in `execute'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.1.2/lib/active_record/connection_adapters/sqlite_adapter.rb:275:in `select'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.1.2/lib/active_record/connection_adapters/abstract/database_statements.rb:7:in `select_all_without_query_cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.1.2/lib/active_record/connection_adapters/abstract/query_cache.rb:59:in `select_all'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.1.2/lib/active_record/connection_adapters/abstract/query_cache.rb:80:in `cache_sql'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.1.2/lib/active_record/connection_adapters/abstract/query_cache.rb:59:in `select_all'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.1.2/lib/active_record/base.rb:586:in `find_by_sql'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.1.2/lib/active_record/base.rb:1345:in `find_every'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.1.2/lib/active_record/base.rb:540:in `find'
+    /app/controllers/units_controller.rb:5:in `index'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:1166:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:1166:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:579:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.1.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.1.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:529:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:529:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/session_management.rb:130:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:389:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.2/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:510:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:510:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.2/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    ./script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+  [4;36;1mSQL (0.000375)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000270)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.003639)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.002925)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000357)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000248)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUnits (20081212004239)
+  [4;36;1mSQL (0.002969)[0m   [0;1mCREATE TABLE "units" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "abbr" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.012550)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081212004239')[0m
+  [4;36;1mSQL (0.000500)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000260)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000362)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000113)[0m   [0mPRAGMA index_list("units")[0m
+
+
+Processing UnitsController#index (for 127.0.0.1 at 2008-12-11 22:44:10) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--25e30e844532a2bae225964e6d2099ed5ba20217
+  Parameters: {"action"=>"index", "controller"=>"units"}
+  [4;35;1mUnit Load (0.000849)[0m   [0mSELECT * FROM "units" [0m
+Rendering template within layouts/units
+Rendering units/index
+Completed in 0.06265 (15 reqs/sec) | Rendering: 0.03297 (52%) | DB: 0.00085 (1%) | 200 OK [http://127.0.0.1/units]
+
+
+Processing UnitsController#new (for 127.0.0.1 at 2008-12-11 22:44:13) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--25e30e844532a2bae225964e6d2099ed5ba20217
+  Parameters: {"action"=>"new", "controller"=>"units"}
+Rendering template within layouts/units
+Rendering units/new
+Completed in 0.04732 (21 reqs/sec) | Rendering: 0.01924 (40%) | DB: 0.00000 (0%) | 200 OK [http://127.0.0.1/units/new]
+
+
+Processing UnitsController#create (for 127.0.0.1 at 2008-12-11 22:44:20) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZWZlMWRmNDM3OTIyNGQyZTIxOThiYjNmOWQ3Mjgz
+NzAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e2a7fe7053baeb14834dee880cda3f60d3ad6f40
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"982815cb1de9b8a1509f4d4ea7220cbf2e6b6307", "action"=>"create", "unit"=>{"name"=>"Unidades", "abbr"=>"un"}, "controller"=>"units"}
+  [4;36;1mUnit Create (0.000590)[0m   [0;1mINSERT INTO "units" ("name", "created_at", "updated_at", "abbr") VALUES('Unidades', '2008-12-12 00:44:20', '2008-12-12 00:44:20', 'un')[0m
+Redirected to http://127.0.0.1:3000/units/1
+Completed in 0.05948 (16 reqs/sec) | DB: 0.00059 (0%) | 302 Found [http://127.0.0.1/units]
+
+
+Processing UnitsController#show (for 127.0.0.1 at 2008-12-11 22:44:20) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZWZlMWRmNDM3OTIyNGQyZTIxOThiYjNmOWQ3Mjgz
+NzAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIiNVbml0IHdhcyBzdWNjZXNzZnVsbHkgY3JlYXRlZC4G
+OgpAdXNlZHsGOwdG--55cabfab4471c47f9f89a863abbf7bfb7882fc60
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"units"}
+  [4;35;1mUnit Load (0.000704)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 1) [0m
+Rendering template within layouts/units
+Rendering units/show
+Completed in 0.03109 (32 reqs/sec) | Rendering: 0.00642 (20%) | DB: 0.00070 (2%) | 200 OK [http://127.0.0.1/units/1]
+
+
+Processing UnitsController#index (for 127.0.0.1 at 2008-12-11 22:44:22) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZWZlMWRmNDM3OTIyNGQyZTIxOThiYjNmOWQ3Mjgz
+NzAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIiNVbml0IHdhcyBzdWNjZXNzZnVsbHkgY3JlYXRlZC4G
+OgpAdXNlZHsGOwdU--ad218ee7a13177c56c30265a763853246ac9b31a
+  Parameters: {"action"=>"index", "controller"=>"units"}
+  [4;36;1mUnit Load (0.001184)[0m   [0;1mSELECT * FROM "units" [0m
+Rendering template within layouts/units
+Rendering units/index
+Completed in 0.03653 (27 reqs/sec) | Rendering: 0.01701 (46%) | DB: 0.00118 (3%) | 200 OK [http://127.0.0.1/units]
+
+
+Processing UnitsController#new (for 127.0.0.1 at 2008-12-11 22:44:23) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZWZlMWRmNDM3OTIyNGQyZTIxOThiYjNmOWQ3Mjgz
+NzAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e2a7fe7053baeb14834dee880cda3f60d3ad6f40
+  Parameters: {"action"=>"new", "controller"=>"units"}
+Rendering template within layouts/units
+Rendering units/new
+Completed in 0.05326 (18 reqs/sec) | Rendering: 0.00711 (13%) | DB: 0.00000 (0%) | 200 OK [http://127.0.0.1/units/new]
+
+
+Processing UnitsController#create (for 127.0.0.1 at 2008-12-11 22:44:33) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZWZlMWRmNDM3OTIyNGQyZTIxOThiYjNmOWQ3Mjgz
+NzAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e2a7fe7053baeb14834dee880cda3f60d3ad6f40
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"982815cb1de9b8a1509f4d4ea7220cbf2e6b6307", "action"=>"create", "unit"=>{"name"=>"Sacos", "abbr"=>"sacos"}, "controller"=>"units"}
+  [4;35;1mUnit Create (0.000594)[0m   [0mINSERT INTO "units" ("name", "created_at", "updated_at", "abbr") VALUES('Sacos', '2008-12-12 00:44:33', '2008-12-12 00:44:33', 'sacos')[0m
+Redirected to http://127.0.0.1:3000/units/2
+Completed in 0.05530 (18 reqs/sec) | DB: 0.00059 (1%) | 302 Found [http://127.0.0.1/units]
+
+
+Processing UnitsController#show (for 127.0.0.1 at 2008-12-11 22:44:33) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZWZlMWRmNDM3OTIyNGQyZTIxOThiYjNmOWQ3Mjgz
+NzAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIiNVbml0IHdhcyBzdWNjZXNzZnVsbHkgY3JlYXRlZC4G
+OgpAdXNlZHsGOwdG--55cabfab4471c47f9f89a863abbf7bfb7882fc60
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"units"}
+  [4;36;1mUnit Load (0.000796)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 2) [0m
+Rendering template within layouts/units
+Rendering units/show
+Completed in 0.03820 (26 reqs/sec) | Rendering: 0.00432 (11%) | DB: 0.00080 (2%) | 200 OK [http://127.0.0.1/units/2]
+
+
+Processing UnitsController#index (for 127.0.0.1 at 2008-12-11 22:44:35) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZWZlMWRmNDM3OTIyNGQyZTIxOThiYjNmOWQ3Mjgz
+NzAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIiNVbml0IHdhcyBzdWNjZXNzZnVsbHkgY3JlYXRlZC4G
+OgpAdXNlZHsGOwdU--ad218ee7a13177c56c30265a763853246ac9b31a
+  Parameters: {"action"=>"index", "controller"=>"units"}
+  [4;35;1mUnit Load (0.001348)[0m   [0mSELECT * FROM "units" [0m
+Rendering template within layouts/units
+Rendering units/index
+Completed in 0.03304 (30 reqs/sec) | Rendering: 0.00852 (25%) | DB: 0.00135 (4%) | 200 OK [http://127.0.0.1/units]
+
+
+Processing UnitsController#new (for 127.0.0.1 at 2008-12-11 22:44:36) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZWZlMWRmNDM3OTIyNGQyZTIxOThiYjNmOWQ3Mjgz
+NzAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e2a7fe7053baeb14834dee880cda3f60d3ad6f40
+  Parameters: {"action"=>"new", "controller"=>"units"}
+Rendering template within layouts/units
+Rendering units/new
+Completed in 0.04337 (23 reqs/sec) | Rendering: 0.02240 (51%) | DB: 0.00000 (0%) | 200 OK [http://127.0.0.1/units/new]
+
+
+Processing UnitsController#create (for 127.0.0.1 at 2008-12-11 22:44:50) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZWZlMWRmNDM3OTIyNGQyZTIxOThiYjNmOWQ3Mjgz
+NzAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e2a7fe7053baeb14834dee880cda3f60d3ad6f40
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"982815cb1de9b8a1509f4d4ea7220cbf2e6b6307", "action"=>"create", "unit"=>{"name"=>"Metro cúbico", "abbr"=>"m³"}, "controller"=>"units"}
+  [4;36;1mUnit Create (0.000551)[0m   [0;1mINSERT INTO "units" ("name", "created_at", "updated_at", "abbr") VALUES('Metro cúbico', '2008-12-12 00:44:50', '2008-12-12 00:44:50', 'm³')[0m
+Redirected to http://127.0.0.1:3000/units/3
+Completed in 0.05207 (19 reqs/sec) | DB: 0.00055 (1%) | 302 Found [http://127.0.0.1/units]
+
+
+Processing UnitsController#show (for 127.0.0.1 at 2008-12-11 22:44:50) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZWZlMWRmNDM3OTIyNGQyZTIxOThiYjNmOWQ3Mjgz
+NzAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIiNVbml0IHdhcyBzdWNjZXNzZnVsbHkgY3JlYXRlZC4G
+OgpAdXNlZHsGOwdG--55cabfab4471c47f9f89a863abbf7bfb7882fc60
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"units"}
+  [4;35;1mUnit Load (0.000806)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 3) [0m
+Rendering template within layouts/units
+Rendering units/show
+Completed in 0.03678 (27 reqs/sec) | Rendering: 0.01288 (35%) | DB: 0.00081 (2%) | 200 OK [http://127.0.0.1/units/3]
+
+
+Processing UnitsController#index (for 127.0.0.1 at 2008-12-11 22:44:52) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZWZlMWRmNDM3OTIyNGQyZTIxOThiYjNmOWQ3Mjgz
+NzAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIiNVbml0IHdhcyBzdWNjZXNzZnVsbHkgY3JlYXRlZC4G
+OgpAdXNlZHsGOwdU--ad218ee7a13177c56c30265a763853246ac9b31a
+  Parameters: {"action"=>"index", "controller"=>"units"}
+  [4;36;1mUnit Load (0.013139)[0m   [0;1mSELECT * FROM "units" [0m
+Rendering template within layouts/units
+Rendering units/index
+Completed in 0.03913 (25 reqs/sec) | Rendering: 0.01472 (37%) | DB: 0.01314 (33%) | 200 OK [http://127.0.0.1/units]
+  [4;36;1mSQL (0.000825)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000427)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUnits (20081212004239)
+Migrating to CreateCategories (20081212004525)
+  [4;36;1mSQL (0.000326)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.003357)[0m   [0mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.002666)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081212004525')[0m
+Migrating to CreateProducts (20081212004601)
+  [4;35;1mSQL (0.014594)[0m   [0mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "unit_id" integer, "category_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.007165)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081212004601')[0m
+  [4;35;1mSQL (0.021335)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000443)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000484)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000121)[0m   [0;1mPRAGMA index_list("categories")[0m
+  [4;35;1mSQL (0.000094)[0m   [0mPRAGMA index_list("products")[0m
+  [4;36;1mSQL (0.000088)[0m   [0;1mPRAGMA index_list("units")[0m
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2008-12-11 22:46:15) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZWZlMWRmNDM3OTIyNGQyZTIxOThiYjNmOWQ3Mjgz
+NzAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e2a7fe7053baeb14834dee880cda3f60d3ad6f40
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mCategory Load (0.000845)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 0.03808 (26 reqs/sec) | Rendering: 0.01596 (41%) | DB: 0.00084 (2%) | 200 OK [http://127.0.0.1/categories]
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2008-12-11 22:46:17) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZWZlMWRmNDM3OTIyNGQyZTIxOThiYjNmOWQ3Mjgz
+NzAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e2a7fe7053baeb14834dee880cda3f60d3ad6f40
+  Parameters: {"action"=>"new", "controller"=>"categories"}
+Rendering template within layouts/categories
+Rendering categories/new
+Completed in 0.03318 (30 reqs/sec) | Rendering: 0.00934 (28%) | DB: 0.00000 (0%) | 200 OK [http://127.0.0.1/categories/new]
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2008-12-11 22:46:24) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZWZlMWRmNDM3OTIyNGQyZTIxOThiYjNmOWQ3Mjgz
+NzAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e2a7fe7053baeb14834dee880cda3f60d3ad6f40
+  Parameters: {"commit"=>"Create", "category"=>{"name"=>"Tijolo", "description"=>""}, "authenticity_token"=>"982815cb1de9b8a1509f4d4ea7220cbf2e6b6307", "action"=>"create", "controller"=>"categories"}
+  [4;36;1mCategory Create (0.000568)[0m   [0;1mINSERT INTO "categories" ("name", "created_at", "updated_at", "description") VALUES('Tijolo', '2008-12-12 00:46:24', '2008-12-12 00:46:24', '')[0m
+Redirected to http://127.0.0.1:3000/categories/1
+Completed in 0.03809 (26 reqs/sec) | DB: 0.00057 (1%) | 302 Found [http://127.0.0.1/categories]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2008-12-11 22:46:24) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZWZlMWRmNDM3OTIyNGQyZTIxOThiYjNmOWQ3Mjgz
+NzAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIidDYXRlZ29yeSB3YXMgc3VjY2Vzc2Z1bGx5IGNyZWF0
+ZWQuBjoKQHVzZWR7BjsHRg==--98b81e659379fed42f0defa566dd19ea42774a79
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"categories"}
+  [4;35;1mCategory Load (0.000755)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 1) [0m
+Rendering template within layouts/categories
+Rendering categories/show
+Completed in 0.03718 (26 reqs/sec) | Rendering: 0.00541 (14%) | DB: 0.00075 (2%) | 200 OK [http://127.0.0.1/categories/1]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2008-12-11 22:46:26) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZWZlMWRmNDM3OTIyNGQyZTIxOThiYjNmOWQ3Mjgz
+NzAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIidDYXRlZ29yeSB3YXMgc3VjY2Vzc2Z1bGx5IGNyZWF0
+ZWQuBjoKQHVzZWR7BjsHVA==--a68be4420fff608f8ca47559fbc0315948b745f7
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;36;1mCategory Load (0.001216)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 0.03741 (26 reqs/sec) | Rendering: 0.01664 (44%) | DB: 0.00122 (3%) | 200 OK [http://127.0.0.1/categories]
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2008-12-11 22:46:27) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZWZlMWRmNDM3OTIyNGQyZTIxOThiYjNmOWQ3Mjgz
+NzAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e2a7fe7053baeb14834dee880cda3f60d3ad6f40
+  Parameters: {"action"=>"new", "controller"=>"categories"}
+Rendering template within layouts/categories
+Rendering categories/new
+Completed in 0.03036 (32 reqs/sec) | Rendering: 0.01644 (54%) | DB: 0.00000 (0%) | 200 OK [http://127.0.0.1/categories/new]
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2008-12-11 22:46:32) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZWZlMWRmNDM3OTIyNGQyZTIxOThiYjNmOWQ3Mjgz
+NzAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e2a7fe7053baeb14834dee880cda3f60d3ad6f40
+  Parameters: {"commit"=>"Create", "category"=>{"name"=>"Cimento", "description"=>""}, "authenticity_token"=>"982815cb1de9b8a1509f4d4ea7220cbf2e6b6307", "action"=>"create", "controller"=>"categories"}
+  [4;35;1mCategory Create (0.000600)[0m   [0mINSERT INTO "categories" ("name", "created_at", "updated_at", "description") VALUES('Cimento', '2008-12-12 00:46:33', '2008-12-12 00:46:33', '')[0m
+Redirected to http://127.0.0.1:3000/categories/2
+Completed in 0.06444 (15 reqs/sec) | DB: 0.00060 (0%) | 302 Found [http://127.0.0.1/categories]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2008-12-11 22:46:33) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZWZlMWRmNDM3OTIyNGQyZTIxOThiYjNmOWQ3Mjgz
+NzAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIidDYXRlZ29yeSB3YXMgc3VjY2Vzc2Z1bGx5IGNyZWF0
+ZWQuBjoKQHVzZWR7BjsHRg==--98b81e659379fed42f0defa566dd19ea42774a79
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"categories"}
+  [4;36;1mCategory Load (0.005338)[0m   [0;1mSELECT * FROM "categories" WHERE ("categories"."id" = 2) [0m
+Rendering template within layouts/categories
+Rendering categories/show
+Completed in 0.03626 (27 reqs/sec) | Rendering: 0.00410 (11%) | DB: 0.00534 (14%) | 200 OK [http://127.0.0.1/categories/2]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2008-12-11 22:46:35) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZWZlMWRmNDM3OTIyNGQyZTIxOThiYjNmOWQ3Mjgz
+NzAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIidDYXRlZ29yeSB3YXMgc3VjY2Vzc2Z1bGx5IGNyZWF0
+ZWQuBjoKQHVzZWR7BjsHVA==--a68be4420fff608f8ca47559fbc0315948b745f7
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;35;1mCategory Load (0.001493)[0m   [0mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 0.03165 (31 reqs/sec) | Rendering: 0.01767 (55%) | DB: 0.00149 (4%) | 200 OK [http://127.0.0.1/categories]
+
+
+Processing CategoriesController#new (for 127.0.0.1 at 2008-12-11 22:46:36) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZWZlMWRmNDM3OTIyNGQyZTIxOThiYjNmOWQ3Mjgz
+NzAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e2a7fe7053baeb14834dee880cda3f60d3ad6f40
+  Parameters: {"action"=>"new", "controller"=>"categories"}
+Rendering template within layouts/categories
+Rendering categories/new
+Completed in 0.03489 (28 reqs/sec) | Rendering: 0.00942 (26%) | DB: 0.00000 (0%) | 200 OK [http://127.0.0.1/categories/new]
+
+
+Processing CategoriesController#create (for 127.0.0.1 at 2008-12-11 22:46:39) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZWZlMWRmNDM3OTIyNGQyZTIxOThiYjNmOWQ3Mjgz
+NzAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e2a7fe7053baeb14834dee880cda3f60d3ad6f40
+  Parameters: {"commit"=>"Create", "category"=>{"name"=>"Cal", "description"=>""}, "authenticity_token"=>"982815cb1de9b8a1509f4d4ea7220cbf2e6b6307", "action"=>"create", "controller"=>"categories"}
+  [4;36;1mCategory Create (0.000579)[0m   [0;1mINSERT INTO "categories" ("name", "created_at", "updated_at", "description") VALUES('Cal', '2008-12-12 00:46:39', '2008-12-12 00:46:39', '')[0m
+Redirected to http://127.0.0.1:3000/categories/3
+Completed in 0.04994 (20 reqs/sec) | DB: 0.00058 (1%) | 302 Found [http://127.0.0.1/categories]
+
+
+Processing CategoriesController#show (for 127.0.0.1 at 2008-12-11 22:46:39) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZWZlMWRmNDM3OTIyNGQyZTIxOThiYjNmOWQ3Mjgz
+NzAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIidDYXRlZ29yeSB3YXMgc3VjY2Vzc2Z1bGx5IGNyZWF0
+ZWQuBjoKQHVzZWR7BjsHRg==--98b81e659379fed42f0defa566dd19ea42774a79
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"categories"}
+  [4;35;1mCategory Load (0.000700)[0m   [0mSELECT * FROM "categories" WHERE ("categories"."id" = 3) [0m
+Rendering template within layouts/categories
+Rendering categories/show
+Completed in 0.03141 (31 reqs/sec) | Rendering: 0.00431 (13%) | DB: 0.00070 (2%) | 200 OK [http://127.0.0.1/categories/3]
+
+
+Processing CategoriesController#index (for 127.0.0.1 at 2008-12-11 22:46:40) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZWZlMWRmNDM3OTIyNGQyZTIxOThiYjNmOWQ3Mjgz
+NzAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIidDYXRlZ29yeSB3YXMgc3VjY2Vzc2Z1bGx5IGNyZWF0
+ZWQuBjoKQHVzZWR7BjsHVA==--a68be4420fff608f8ca47559fbc0315948b745f7
+  Parameters: {"action"=>"index", "controller"=>"categories"}
+  [4;36;1mCategory Load (0.001649)[0m   [0;1mSELECT * FROM "categories" [0m
+Rendering template within layouts/categories
+Rendering categories/index
+Completed in 0.03185 (31 reqs/sec) | Rendering: 0.00982 (30%) | DB: 0.00165 (5%) | 200 OK [http://127.0.0.1/categories]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-12-11 22:46:49) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZWZlMWRmNDM3OTIyNGQyZTIxOThiYjNmOWQ3Mjgz
+NzAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e2a7fe7053baeb14834dee880cda3f60d3ad6f40
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;35;1mProduct Load (0.000866)[0m   [0mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 0.06580 (15 reqs/sec) | Rendering: 0.03407 (51%) | DB: 0.00087 (1%) | 200 OK [http://127.0.0.1/products]
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2008-12-11 22:46:51) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZWZlMWRmNDM3OTIyNGQyZTIxOThiYjNmOWQ3Mjgz
+NzAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e2a7fe7053baeb14834dee880cda3f60d3ad6f40
+  Parameters: {"action"=>"new", "controller"=>"products"}
+Rendering template within layouts/products
+Rendering products/new
+
+
+ActionView::TemplateError (undefined method `unit' for #<Product:0xb55d72ac>) on line #16 of products/new.html.erb:
+13:   </p>
+14:   <p>
+15:     <%= f.label :unit %><br />
+16:     <%= f.text_field :unit %>
+17:   </p>
+18:   <p>
+19:     <%= f.label :category %><br />
+
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.1.2/lib/active_record/attribute_methods.rb:256:in `method_missing'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_view/helpers/form_helper.rb:628:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_view/helpers/form_helper.rb:628:in `value_before_type_cast'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_view/helpers/form_helper.rb:616:in `value_before_type_cast'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_view/helpers/form_helper.rb:535:in `to_input_field_tag'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_view/helpers/form_helper.rb:358:in `text_field'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_view/helpers/form_helper.rb:713:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_view/helpers/form_helper.rb:713:in `text_field'
+    app/views/products/new.html.erb:16:in `_run_erb_47app47views47products47new46html46erb'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_view/helpers/form_helper.rb:317:in `fields_for'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_view/helpers/form_helper.rb:253:in `form_for'
+    app/views/products/new.html.erb:3:in `_run_erb_47app47views47products47new46html46erb'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_view/base.rb:342:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_view/base.rb:342:in `execute'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_view/template.rb:35:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_view/template.rb:22:in `render_template'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_view/base.rb:248:in `render_file'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:1112:in `render_for_file'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:869:in `render_with_no_layout'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:884:in `render_with_no_layout'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:131:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:131:in `custom'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:160:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:160:in `respond'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:154:in `each'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:154:in `respond'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/products_controller.rb:29:in `new'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:1166:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:1166:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:579:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.1.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.1.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:529:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:529:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/session_management.rb:130:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:389:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.2/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:510:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:510:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.2/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2008-12-11 22:47:49) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZWZlMWRmNDM3OTIyNGQyZTIxOThiYjNmOWQ3Mjgz
+NzAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e2a7fe7053baeb14834dee880cda3f60d3ad6f40
+  Parameters: {"action"=>"new", "controller"=>"products"}
+Rendering template within layouts/products
+Rendering products/new
+
+
+ActionView::TemplateError (undefined method `category' for #<Product:0xb56c97f0>) on line #20 of products/new.html.erb:
+17:   </p>
+18:   <p>
+19:     <%= f.label :category %><br />
+20:     <%= f.text_field :category %>
+21:   </p>
+22:   <p>
+23:     <%= f.submit "Create" %>
+
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.1.2/lib/active_record/attribute_methods.rb:256:in `method_missing'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_view/helpers/form_helper.rb:628:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_view/helpers/form_helper.rb:628:in `value_before_type_cast'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_view/helpers/form_helper.rb:616:in `value_before_type_cast'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_view/helpers/form_helper.rb:535:in `to_input_field_tag'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_view/helpers/form_helper.rb:358:in `text_field'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_view/helpers/form_helper.rb:713:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_view/helpers/form_helper.rb:713:in `text_field'
+    app/views/products/new.html.erb:20:in `_run_erb_47app47views47products47new46html46erb'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_view/helpers/form_helper.rb:317:in `fields_for'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_view/helpers/form_helper.rb:253:in `form_for'
+    app/views/products/new.html.erb:3:in `_run_erb_47app47views47products47new46html46erb'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_view/base.rb:342:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_view/base.rb:342:in `execute'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_view/template.rb:35:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_view/template.rb:22:in `render_template'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_view/base.rb:248:in `render_file'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:1112:in `render_for_file'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:869:in `render_with_no_layout'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:884:in `render_with_no_layout'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:131:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:131:in `custom'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:160:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:160:in `respond'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:154:in `each'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:154:in `respond'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/products_controller.rb:29:in `new'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:1166:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:1166:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:579:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:572:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.1.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.1.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:529:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:529:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/filters.rb:568:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/session_management.rb:130:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/base.rb:389:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:503:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.2/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:510:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:355:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.1.2/lib/active_support/dependencies.rb:510:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.1.2/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.1.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2008-12-11 22:48:02) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZWZlMWRmNDM3OTIyNGQyZTIxOThiYjNmOWQ3Mjgz
+NzAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e2a7fe7053baeb14834dee880cda3f60d3ad6f40
+  Parameters: {"action"=>"new", "controller"=>"products"}
+Rendering template within layouts/products
+Rendering products/new
+Completed in 0.07051 (14 reqs/sec) | Rendering: 0.03310 (46%) | DB: 0.00000 (0%) | 200 OK [http://127.0.0.1/products/new]
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2008-12-11 22:49:02) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZWZlMWRmNDM3OTIyNGQyZTIxOThiYjNmOWQ3Mjgz
+NzAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--e2a7fe7053baeb14834dee880cda3f60d3ad6f40
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"982815cb1de9b8a1509f4d4ea7220cbf2e6b6307", "action"=>"create", "product"=>{"name"=>"Tijolo 6 furos", "unit_id"=>"1", "category_id"=>"1", "description"=>""}, "controller"=>"products"}
+  [4;36;1mProduct Create (0.000583)[0m   [0;1mINSERT INTO "products" ("name", "created_at", "unit_id", "updated_at", "category_id", "description") VALUES('Tijolo 6 furos', '2008-12-12 00:49:02', 1, '2008-12-12 00:49:02', 1, '')[0m
+Redirected to http://127.0.0.1:3000/products/1
+Completed in 0.04876 (20 reqs/sec) | DB: 0.00058 (1%) | 302 Found [http://127.0.0.1/products]
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2008-12-11 22:49:02) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZWZlMWRmNDM3OTIyNGQyZTIxOThiYjNmOWQ3Mjgz
+NzAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIiZQcm9kdWN0IHdhcyBzdWNjZXNzZnVsbHkgY3JlYXRl
+ZC4GOgpAdXNlZHsGOwdG--cf9bf7139ba44fd50f279d7d0acf5c5fc0aafd91
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"products"}
+  [4;35;1mProduct Load (0.000879)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 0.03712 (26 reqs/sec) | Rendering: 0.00729 (19%) | DB: 0.00088 (2%) | 200 OK [http://127.0.0.1/products/1]
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2008-12-11 22:49:04) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZWZlMWRmNDM3OTIyNGQyZTIxOThiYjNmOWQ3Mjgz
+NzAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIiZQcm9kdWN0IHdhcyBzdWNjZXNzZnVsbHkgY3JlYXRl
+ZC4GOgpAdXNlZHsGOwdU--91e16352b18cec48320b16ff330728651f57b951
+  Parameters: {"action"=>"index", "controller"=>"products"}
+  [4;36;1mProduct Load (0.001304)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 0.27779 (3 reqs/sec) | Rendering: 0.24943 (89%) | DB: 0.00130 (0%) | 200 OK [http://127.0.0.1/products]

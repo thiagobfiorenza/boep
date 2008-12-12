@@ -6,17 +6,17 @@
     <th>Abbr</th>
   </tr>
 
-<% for units in @units %>
+<% for unit in @units %>
   <tr>
-    <td><%=h units.name %></td>
-    <td><%=h units.abbr %></td>
-    <td><%= link_to 'Show', units %></td>
-    <td><%= link_to 'Edit', edit_units_path(units) %></td>
-    <td><%= link_to 'Destroy', units, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%=h unit.name %></td>
+    <td><%=h unit.abbr %></td>
+    <td><%= link_to 'Show', unit %></td>
+    <td><%= link_to 'Edit', edit_unit_path(unit) %></td>
+    <td><%= link_to 'Destroy', unit, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New units', new_units_path %>
+<%= link_to 'New unit', new_unit_path %>

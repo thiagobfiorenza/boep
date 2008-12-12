@@ -2,7 +2,7 @@ class UnitsController < ApplicationController
   # GET /units
   # GET /units.xml
   def index
-    @units = Units.find(:all)
+    @units = Unit.find(:all)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,43 +13,43 @@ class UnitsController < ApplicationController
   # GET /units/1
   # GET /units/1.xml
   def show
-    @units = Units.find(params[:id])
+    @unit = Unit.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @units }
+      format.xml  { render :xml => @unit }
     end
   end
 
   # GET /units/new
   # GET /units/new.xml
   def new
-    @units = Units.new
+    @unit = Unit.new
 
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @units }
+      format.xml  { render :xml => @unit }
     end
   end
 
   # GET /units/1/edit
   def edit
-    @units = Units.find(params[:id])
+    @unit = Unit.find(params[:id])
   end
 
   # POST /units
   # POST /units.xml
   def create
-    @units = Units.new(params[:units])
+    @unit = Unit.new(params[:unit])
 
     respond_to do |format|
-      if @units.save
-        flash[:notice] = 'Units was successfully created.'
-        format.html { redirect_to(@units) }
-        format.xml  { render :xml => @units, :status => :created, :location => @units }
+      if @unit.save
+        flash[:notice] = 'Unit was successfully created.'
+        format.html { redirect_to(@unit) }
+        format.xml  { render :xml => @unit, :status => :created, :location => @unit }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @units.errors, :status => :unprocessable_entity }
+        format.xml  { render :xml => @unit.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -57,16 +57,16 @@ class UnitsController < ApplicationController
   # PUT /units/1
   # PUT /units/1.xml
   def update
-    @units = Units.find(params[:id])
+    @unit = Unit.find(params[:id])
 
     respond_to do |format|
-      if @units.update_attributes(params[:units])
-        flash[:notice] = 'Units was successfully updated.'
-        format.html { redirect_to(@units) }
+      if @unit.update_attributes(params[:unit])
+        flash[:notice] = 'Unit was successfully updated.'
+        format.html { redirect_to(@unit) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @units.errors, :status => :unprocessable_entity }
+        format.xml  { render :xml => @unit.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -74,8 +74,8 @@ class UnitsController < ApplicationController
   # DELETE /units/1
   # DELETE /units/1.xml
   def destroy
-    @units = Units.find(params[:id])
-    @units.destroy
+    @unit = Unit.find(params[:id])
+    @unit.destroy
 
     respond_to do |format|
       format.html { redirect_to(units_url) }

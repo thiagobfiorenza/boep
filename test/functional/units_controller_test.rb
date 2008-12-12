@@ -12,15 +12,15 @@ class UnitsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  def test_should_create_units
-    assert_difference('Units.count') do
-      post :create, :units => { }
+  def test_should_create_unit
+    assert_difference('Unit.count') do
+      post :create, :unit => { }
     end
 
-    assert_redirected_to units_path(assigns(:units))
+    assert_redirected_to unit_path(assigns(:unit))
   end
 
-  def test_should_show_units
+  def test_should_show_unit
     get :show, :id => units(:one).id
     assert_response :success
   end
@@ -30,13 +30,13 @@ class UnitsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  def test_should_update_units
-    put :update, :id => units(:one).id, :units => { }
-    assert_redirected_to units_path(assigns(:units))
+  def test_should_update_unit
+    put :update, :id => units(:one).id, :unit => { }
+    assert_redirected_to unit_path(assigns(:unit))
   end
 
-  def test_should_destroy_units
-    assert_difference('Units.count', -1) do
+  def test_should_destroy_unit
+    assert_difference('Unit.count', -1) do
       delete :destroy, :id => units(:one).id
     end
 
