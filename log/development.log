@@ -837,3 +837,72 @@ SGFzaHsABjoKQHVzZWR7AA==--25e30e844532a2bae225964e6d2099ed5ba20217
 Rendering template within layouts/units
 Rendering units/new
 Completed in 0.07218 (13 reqs/sec) | Rendering: 0.03290 (45%) | DB: 0.00000 (0%) | 200 OK [http://localhost/units/new]
+  [4;36;1mSQL (0.000997)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000811)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.225484)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.372958)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000976)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000580)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUnits (20081212004239)
+  [4;36;1mSQL (0.145774)[0m   [0;1mCREATE TABLE "units" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "abbr" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.263667)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081212004239')[0m
+Migrating to CreateCategories (20081212004525)
+  [4;36;1mSQL (0.147894)[0m   [0;1mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.265431)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081212004525')[0m
+Migrating to CreateProducts (20081212004601)
+  [4;36;1mSQL (0.144422)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "unit_id" integer, "category_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.266195)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081212004601')[0m
+Migrating to CreateCustomers (20081215205033)
+  [4;36;1mSQL (0.143295)[0m   [0;1mCREATE TABLE "customers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "document" varchar(255), "email" varchar(255), "birth" date, "address" varchar(255), "city" varchar(255), "state" varchar(255), "phone" varchar(255), "postcode" varchar(255), "mobile" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.382323)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081215205033')[0m
+  [4;36;1mSQL (0.003195)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.002582)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.003079)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000547)[0m   [0mPRAGMA index_list("categories")[0m
+  [4;36;1mSQL (0.000543)[0m   [0;1mPRAGMA index_list("customers")[0m
+  [4;35;1mSQL (0.000563)[0m   [0mPRAGMA index_list("products")[0m
+  [4;36;1mSQL (0.000516)[0m   [0;1mPRAGMA index_list("units")[0m
+
+
+Processing CustomersController#index (for 127.0.0.1 at 2008-12-15 18:51:25) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWE5OTc1MGVkOGNmZWJlNmNmMDczNjBhZTBmOTU0
+ZGMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--bb707de7f0c324a376893180fbf03e17f4376174
+  Parameters: {"action"=>"index", "controller"=>"customers"}
+  [4;36;1mCustomer Load (0.002172)[0m   [0;1mSELECT * FROM "customers" [0m
+Rendering template within layouts/customers
+Rendering customers/index
+Completed in 0.04272 (23 reqs/sec) | Rendering: 0.02094 (49%) | DB: 0.00217 (5%) | 200 OK [http://localhost/customers]
+
+
+Processing CustomersController#index (for 127.0.0.1 at 2008-12-15 18:51:26) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWE5OTc1MGVkOGNmZWJlNmNmMDczNjBhZTBmOTU0
+ZGMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--bb707de7f0c324a376893180fbf03e17f4376174
+  Parameters: {"action"=>"index", "controller"=>"customers"}
+  [4;35;1mCustomer Load (0.010416)[0m   [0mSELECT * FROM "customers" [0m
+Rendering template within layouts/customers
+Rendering customers/index
+Completed in 0.03330 (30 reqs/sec) | Rendering: 0.00367 (11%) | DB: 0.01042 (31%) | 200 OK [http://localhost/customers]
+
+
+Processing CustomersController#new (for 127.0.0.1 at 2008-12-15 18:51:31) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWE5OTc1MGVkOGNmZWJlNmNmMDczNjBhZTBmOTU0
+ZGMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--bb707de7f0c324a376893180fbf03e17f4376174
+  Parameters: {"action"=>"new", "controller"=>"customers"}
+Rendering template within layouts/customers
+Rendering customers/new
+Completed in 0.47620 (2 reqs/sec) | Rendering: 0.38229 (80%) | DB: 0.00000 (0%) | 200 OK [http://localhost/customers/new]

@@ -1,0 +1,53 @@
+<p>
+  <b>Name:</b>
+  <%=h @customer.name %>
+</p>
+
+<p>
+  <b>Document:</b>
+  <%=h @customer.document %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @customer.email %>
+</p>
+
+<p>
+  <b>Birth:</b>
+  <%=h @customer.birth %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%=h @customer.address %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%=h @customer.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%=h @customer.state %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%=h @customer.phone %>
+</p>
+
+<p>
+  <b>Postcode:</b>
+  <%=h @customer.postcode %>
+</p>
+
+<p>
+  <b>Mobile:</b>
+  <%=h @customer.mobile %>
+</p>
+
+
+<%= link_to 'Edit', edit_customer_path(@customer) %> |
+<%= link_to 'Back', customers_path %>
