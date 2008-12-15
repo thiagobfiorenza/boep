@@ -906,3 +906,9 @@ c2h7AAY6CkB1c2VkewA=--bb707de7f0c324a376893180fbf03e17f4376174
 Rendering template within layouts/customers
 Rendering customers/new
 Completed in 0.47620 (2 reqs/sec) | Rendering: 0.38229 (80%) | DB: 0.00000 (0%) | 200 OK [http://localhost/customers/new]
+
+
+Processing CustomersController#new (for 127.0.0.1 at 2008-12-15 19:19:05) [GET]
+Rendering template within layouts/customers
+Rendering customers/new
+Completed in 591ms (View: 464, DB: 0) | 200 OK [http://localhost/customers/new]
