@@ -786,3 +786,54 @@ c2h7AAY6CkB1c2VkewA=--e2a7fe7053baeb14834dee880cda3f60d3ad6f40
 Rendering template within layouts/products
 Rendering products/new
 Completed in 0.06406 (15 reqs/sec) | Rendering: 0.01450 (22%) | DB: 0.00000 (0%) | 200 OK [http://127.0.0.1/products]
+  [4;36;1mSQL (0.002162)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.001677)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.008502)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.024393)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.001893)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.001048)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUnits (20081212004239)
+  [4;36;1mSQL (0.015824)[0m   [0;1mCREATE TABLE "units" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "abbr" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.005257)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081212004239')[0m
+Migrating to CreateCategories (20081212004525)
+  [4;36;1mSQL (0.007691)[0m   [0;1mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.006879)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081212004525')[0m
+Migrating to CreateProducts (20081212004601)
+  [4;36;1mSQL (0.017496)[0m   [0;1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "unit_id" integer, "category_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.009371)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081212004601')[0m
+  [4;36;1mSQL (0.003202)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.002602)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.013902)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000647)[0m   [0mPRAGMA index_list("categories")[0m
+  [4;36;1mSQL (0.000736)[0m   [0;1mPRAGMA index_list("products")[0m
+  [4;35;1mSQL (0.000619)[0m   [0mPRAGMA index_list("units")[0m
+
+
+Processing UnitsController#index (for 127.0.0.1 at 2008-12-15 18:26:41) [GET]
+  Session ID: 8174aa8d9f538da3d2a8c6a311e7cdf9
+  Parameters: {"action"=>"index", "controller"=>"units"}
+  [4;36;1mUnit Load (0.003184)[0m   [0;1mSELECT * FROM "units" [0m
+Rendering template within layouts/units
+Rendering units/index
+Completed in 0.05441 (18 reqs/sec) | Rendering: 0.01236 (22%) | DB: 0.00318 (5%) | 200 OK [http://localhost/units]
+
+
+Processing UnitsController#new (for 127.0.0.1 at 2008-12-15 18:26:46) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--25e30e844532a2bae225964e6d2099ed5ba20217
+  Parameters: {"action"=>"new", "controller"=>"units"}
+Rendering template within layouts/units
+Rendering units/new
+Completed in 0.07218 (13 reqs/sec) | Rendering: 0.03290 (45%) | DB: 0.00000 (0%) | 200 OK [http://localhost/units/new]
