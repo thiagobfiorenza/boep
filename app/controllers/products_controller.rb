@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+  before_filter :load_units
+  before_filter :load_categories
   # GET /products
   # GET /products.xml
   def index
@@ -81,5 +83,11 @@ class ProductsController < ApplicationController
       format.html { redirect_to(products_url) }
       format.xml  { head :ok }
     end
+  end
+  def load_units
+    @units = Unit.all.map{ |c| [c.abbr, c.id] }
+  end
+  def load_categories
+    @categories = Category.all.map{ |c| [c.name, c.id] }
   end
 end

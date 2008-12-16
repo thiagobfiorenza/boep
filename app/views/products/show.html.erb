@@ -3,19 +3,21 @@
   <%=h @product.name %>
 </p>
 
+<% unless @product.description.empty? %>
 <p>
   <b>Description:</b>
   <%=h @product.description %>
 </p>
+<% end %>
 
 <p>
   <b>Unit:</b>
-  <%=h @product.unit_id %>
+  <%=h @product.unit.name %>(<%=h @product.unit.abbr %>)
 </p>
 
 <p>
   <b>Category:</b>
-  <%=h @product.category_id %>
+  <%=h @product.category.name %>
 </p>
 
 
