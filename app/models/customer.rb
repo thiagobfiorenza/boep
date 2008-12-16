@@ -10,4 +10,5 @@ class Customer < ActiveRecord::Base
 	validates_length_of :postcode, :in => 7..10, :allow_blank => false
 	validates_length_of :mobile, :in => 7..32, :allow_blank => false
 	validates_numericality_of :mobile
+
 end
