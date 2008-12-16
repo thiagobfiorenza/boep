@@ -11,4 +11,7 @@ class Customer < ActiveRecord::Base
 	validates_length_of :mobile, :in => 7..32, :allow_blank => false
 	validates_numericality_of :mobile
 
+  START_YEAR = Date.today.year-15
+  END_YEAR = Date.today.year-100
+
 end

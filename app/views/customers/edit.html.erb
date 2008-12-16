@@ -17,7 +17,7 @@
   </p>
   <p>
     <%= f.label :birth %><br />
-    <%= f.date_select :birth, :order => [:day, :month, :year], :include_blank => true, :start_year => Date.today.year-15, :end_year => Date.today.year-100 %>
+    <%= f.date_select :birth, :order => [:day, :month, :year], :include_blank => true, :start_year => Customer::START_YEAR, :end_year => Customer::END_YEAR %>
   </p>
   <p>
     <%= f.label :address %><br />
