@@ -3,38 +3,8 @@
 <% form_for(@supplier) do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :document %><br />
-    <%= f.text_field :document %>
-  </p>
-  <p>
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </p>
-  <p>
-    <%= f.label :address %><br />
-    <%= f.text_field :address %>
-  </p>
-  <p>
-    <%= f.label :city %><br />
-    <%= f.text_field :city %>
-  </p>
-  <p>
-    <%= f.label :state %><br />
-    <%= f.text_field :state %>
-  </p>
-  <p>
-    <%= f.label :phone %><br />
-    <%= f.text_field :phone %>
-  </p>
-  <p>
-    <%= f.label :postcode %><br />
-    <%= f.text_field :postcode %>
-  </p>
+	<%= render :partial => 'suppliers_form', :locals => {:f => f} %>
+
   <p>
     <%= f.submit "Update" %>
   </p>

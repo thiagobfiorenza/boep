@@ -3,22 +3,9 @@
 <% form_for(@product) do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </p>
-  <p>
-    <%= f.label :unit_id %><br />
-    <%= f.select :unit_id, @units, :prompt => 'Select'  %>
-  </p>
-  <p>
-    <%= f.label :category_id %><br />
-    <%= f.select :category_id, @categories, :prompt => 'Select'  %>
-  </p>
+	<%= render :partial => 'products_form', :locals => {:f => f} %>
+
+
   <p>
     <%= f.submit "Update" %>
   </p>

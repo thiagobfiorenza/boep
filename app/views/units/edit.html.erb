@@ -3,14 +3,8 @@
 <% form_for(@unit) do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :abbr %><br />
-    <%= f.text_field :abbr %>
-  </p>
+	<%= render :partial => 'units_form', :locals => {:f => f} %>
+
   <p>
     <%= f.submit "Update" %>
   </p>
