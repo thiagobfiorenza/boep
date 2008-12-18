@@ -1,4 +1,5 @@
 class SuppliersController < ApplicationController
+  before_filter :load_categories_and_products
   # GET /suppliers
   # GET /suppliers.xml
   def index
@@ -81,5 +82,9 @@ class SuppliersController < ApplicationController
       format.html { redirect_to(suppliers_url) }
       format.xml  { head :ok }
     end
+  end
+  def load_categories_and_products
+    @categories = Category.find(:all, :order => "name").collect { |c| [c.id, c.name] }
+    @products = Product.all.map{ |c| [c.id, c.name] }
   end
 end

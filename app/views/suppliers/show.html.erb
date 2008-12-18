@@ -38,6 +38,17 @@
   <%=h @supplier.postcode %>
 </p>
 
+<% unless @supplier.categories.empty? %>
+  <p>
+    <b>Members:</b>
+    <ul>
+      <% @supplier.categories.each do |category| %>
+        <li><%=h category.name %></li>
+      <% end %>
+    </ul>
+  </p>
+<% end %>
+
 
 <%= link_to 'Edit', edit_supplier_path(@supplier) %> |
 <%= link_to 'Back', suppliers_path %>

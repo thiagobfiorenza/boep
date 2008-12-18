@@ -30,3 +30,12 @@
     <%= f.label :postcode %><br />
     <%= f.text_field :postcode %>
   </p>
+  <p>
+  	<b>Categories</b><br />
+  		<ul>
+<% @categories.each do |category| %>
+    	<li><%= check_box_tag "supplier[category_ids][]", category.first, @supplier.categories.include?(category), :id => category.first %><%= label_tag category.first, category.last %></li>
+<% end %>
+  		</ul>
+</p>
+
