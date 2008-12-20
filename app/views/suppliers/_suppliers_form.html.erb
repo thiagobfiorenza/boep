@@ -34,7 +34,7 @@
   	<b>Categories</b><br />
   		<ul>
 <% @categories.each do |category| %>
-    	<li><%= check_box_tag "supplier[category_ids][]", category.first, @supplier.categories.include?(category), :id => category.first %><%= label_tag category.first, category.last %></li>
+    	<li><%= check_box_tag "supplier[category_ids][]", category.id, @supplier.categories.include?(category), :id => category.id %><%= label_tag category.id, category.name %></li>
 <% end %>
   		</ul>
 </p>

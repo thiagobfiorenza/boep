@@ -84,7 +84,7 @@ class SuppliersController < ApplicationController
     end
   end
   def load_categories_and_products
-    @categories = Category.find(:all, :order => "name").collect { |c| [c.id, c.name] }
+    @categories = Category.find(:all, :order => "name")
     @products = Product.all.map{ |c| [c.id, c.name] }
   end
 end
