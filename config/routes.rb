@@ -1,4 +1,14 @@
 ActionController::Routing::Routes.draw do |map|
+
+  map.resources :sessions
+
+  map.with_options(:controller => "sessions") do |sessions|
+    sessions.login "/login", :action => "new"
+	  sessions.logout "/logout", :action => "destroy"
+	end
+
+  map.resources :users
+
   map.resources :suppliers
 
   map.resources :customers
@@ -27,7 +37,7 @@ ActionController::Routing::Routes.draw do |map|
 
   # Sample resource route with sub-resources:
   #   map.resources :products, :has_many => [ :comments, :sales ], :has_one => :seller
-  
+
   # Sample resource route with more complex sub-resources
   #   map.resources :products do |products|
   #     products.resources :comments

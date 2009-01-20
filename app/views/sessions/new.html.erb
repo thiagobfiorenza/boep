@@ -1,0 +1,21 @@
+<h1>Bem vindo ao BOEP!</h1>
+<% form_tag sessions_url, :method => :post do %>
+  <%= content_tag(:p, flash[:notice], :style => "color:red") if
+flash[:notice] %>
+  <p>
+    <b>Login</b><br />
+    <%= text_field_tag :login, params[:login] %>
+  </p>
+  <p>
+    <b>Password</b><br />
+    <%= password_field_tag :password, "" %>
+  </p>
+  <p>
+    <%= submit_tag "Enter" %>
+  </p>
+
+  <p>
+	  <b>Login:</b> tecmedia<br />
+	  <b>Senha:</b> 123456
+  </p>
+<% end %>
