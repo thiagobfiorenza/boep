@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  enddate: 2009-01-20
+  comment: MyText
+  customer: 
+
+two:
+  enddate: 2009-01-20
+  comment: MyText
+  customer: 

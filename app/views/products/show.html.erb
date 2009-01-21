@@ -1,0 +1,25 @@
+<p>
+  <b>Name:</b>
+  <%=h @product.name %>
+</p>
+
+<% unless @product.description.empty? %>
+<p>
+  <b>Description:</b>
+  <%=h @product.description %>
+</p>
+<% end %>
+
+<p>
+  <b>Unit:</b>
+  <%=h @product.unit.name %>(<%=h @product.unit.abbr %>)
+</p>
+
+<p>
+  <b>Category:</b>
+  <%=h @product.category.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>

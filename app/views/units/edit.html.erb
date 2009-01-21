@@ -1,0 +1,14 @@
+<h1>Editing unit</h1>
+
+<% form_for(@unit) do |f| %>
+  <%= f.error_messages %>
+
+	<%= render :partial => 'units_form', :locals => {:f => f} %>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @unit %> |
+<%= link_to 'Back', units_path %>

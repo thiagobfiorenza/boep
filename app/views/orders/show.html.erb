@@ -1,0 +1,18 @@
+<p>
+  <b>Enddate:</b>
+  <%=h @order.enddate %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%=h @order.comment %>
+</p>
+
+<p>
+  <b>Customer:</b>
+  <%=h @order.customer.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>
