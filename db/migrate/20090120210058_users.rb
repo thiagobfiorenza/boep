@@ -8,6 +8,7 @@ class Users < ActiveRecord::Migration
 
       t.timestamps
     end
+    User.create(:name => "Tecmedia", :login => "tecmedia", :password => "123456", :kind => "administrator")
   end
 
   def self.down
