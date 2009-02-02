@@ -43,7 +43,15 @@
     <b>Categories:</b>
     <ul>
       <% @supplier.categories.each do |category| %>
-        <li><%=h category.name %></li>
+        <li><%=h category.name %>
+		<ul>
+      <% @supplier.products.each do |product| %>
+	<% if product.category_id == category.id then %>
+			<li><%=h product.name %></li>
+	 <% end %>
+      <% end %>
+		</ul>
+	</li>
       <% end %>
     </ul>
   </p>

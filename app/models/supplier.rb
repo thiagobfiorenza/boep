@@ -6,5 +6,6 @@ class Supplier < ActiveRecord::Base
 	validates_format_of :postcode, :with => /\d{8}/
 	
 	has_and_belongs_to_many :categories, :class_name => "Category", :join_table => "categories_suppliers", :association_foreign_key => "category_id"
+	has_and_belongs_to_many :products, :class_name => "Product", :join_table => "products_suppliers", :association_foreign_key => "product_id"
 	
 end

@@ -34,8 +34,25 @@
   	<b>Categories</b><br />
   		<ul>
 <% @categories.each do |category| %>
-    	<li><%= check_box_tag "supplier[category_ids][]", category.id, @supplier.categories.include?(category), :id => category.id %><%= label_tag category.id, category.name %></li>
+    	<li><%= check_box_tag "supplier[category_ids][]", category.id, @supplier.categories.include?(category), :id => "cat-#{category.id}", :onclick => "marcaProdutos(this.value);" %><%= label_tag "cat-#{category.id}", category.name %>
+		<ul>
+<%	Product.find(:all, :conditions =>["category_id = ?", category.id], :order => "name").each do |product| %>
+			<li><%= check_box_tag "supplier[product_ids][]", product.id, @supplier.products.include?(product), :id => "prod-#{product.id}", :class => "cat-#{category.id}" %><%= label_tag "prod-#{product.id}", product.name %></li>
+	<% end %>
+		</ul>
+	</li>
 <% end %>
   		</ul>
 </p>
+<script type="text/javascript">
+	function marcaProdutos(category){
+		arr = document.getElementsByTagName('input');
+		for(var i=0; i<arr.length; i++){
+			obj = arr[i];
+			if(obj.className == 'cat-'+category){
+				obj.checked='checked';
 
+			}
+		}
+	}
+</script>
