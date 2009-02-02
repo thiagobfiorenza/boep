@@ -1,0 +1,15 @@
+  <p>
+    <%= f.label :customer_id %><br />
+    <%= f.select :customer_id, @customers, :prompt => 'Select'  %>
+  </p>
+  <p>
+    <%= f.label :enddate %><br />
+    <%= f.date_select :enddate %>
+  </p>
+  <p>
+    <%= f.label :comment %><br />
+    <%= f.text_area :comment %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
